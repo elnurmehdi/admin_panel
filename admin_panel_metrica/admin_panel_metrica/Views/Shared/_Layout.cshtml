@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- <meta charset="utf-8" />
@@ -452,16 +453,16 @@
                             </li><!--end nav-item-->
 
                             <li class="nav-item">
-                                <a class="nav-link" href="apps-chat.html">Chat</a>
+                                <a class="nav-link" asp-controller="chat" asp-action="index">Chat</a>
                             </li><!--end nav-item-->
                             <li class="nav-item">
-                                <a class="nav-link" href="apps-contact-list.html">Contact List</a>
+                                <a class="nav-link" asp-controller="contactlist" asp-action="index">Contact List</a>
                             </li><!--end nav-item-->
                             <li class="nav-item">
-                                <a class="nav-link" href="apps-calendar.html">Calendar</a>
+                                <a class="nav-link" asp-controller="calendar" asp-action="index">Calendar</a>
                             </li><!--end nav-item-->
                             <li class="nav-item">
-                                <a class="nav-link" href="apps-invoice.html">Invoice</a>
+                                <a class="nav-link" asp-controller="invoice" asp-action="index">Invoice</a>
                             </li><!--end nav-item-->
                         </ul><!--end navbar-nav--->
                     </div><!--end sidebarCollapse-->
@@ -1051,7 +1052,7 @@
         <!-- Page Content-->
         <div class="page-content-tab">
 
-           @RenderBody();
+            @RenderBody();
             <!--Start Rightbar-->
             <!--Start Rightbar/offcanvas-->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
@@ -1097,8 +1098,9 @@
             <!--Start Footer-->
             <!-- Footer Start -->
             <footer class="footer text-center text-sm-start">
-                &copy; <script>
-                           document.write(new Date().getFullYear())
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
                 </script> Metrica <span class="text-muted d-none d-sm-inline-block float-end">
                     Crafted with <i class="mdi mdi-heart text-danger"></i> by Mannatthemes
                 </span>
@@ -1117,7 +1119,7 @@
 
     <!-- App js -->
     <script src="~/assets/js/app.js"></script>
-    @RenderSection("style",false)
+    @RenderSection("style", false)
 </body>
 <!--end body-->
 </html>
